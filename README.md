@@ -10,7 +10,7 @@
 
 ```hcl
 module "iam_account" {
-  source  = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-account"
+  source  = "git::https://github.com/devops-terraform-aws/iam//modules/iam-account?ref=v1.0.0"
 
   account_alias = "awesome-company"
 
@@ -23,7 +23,7 @@ module "iam_account" {
 
 ```hcl
 module "iam_assumable_role" {
-  source  = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-assumable-role"
+  source  = "git::https://github.com/devops-terraform-aws/iam//modules/iam-assumable-role?ref=v1.0.0"
 
   trusted_role_arns = [
     "arn:aws:iam::307990089504:root",
@@ -47,7 +47,7 @@ module "iam_assumable_role" {
 
 ```hcl
 module "iam_assumable_role_with_oidc" {
-  source  = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-assumable-role-with-oidc"
+  source  = "git::https://github.com/devops-terraform-aws/iam//modules/iam-assumable-role-with-oidc?ref=v1.0.0"
 
   create_role = true
 
@@ -70,7 +70,7 @@ module "iam_assumable_role_with_oidc" {
 
 ```hcl
 module "iam_assumable_role_with_saml" {
-  source  = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-assumable-role-with-saml"
+  source  = "git::https://github.com/devops-terraform-aws/iam//modules/iam-assumable-role-with-saml?ref=v1.0.0"
 
   create_role = true
 
@@ -93,7 +93,7 @@ module "iam_assumable_role_with_saml" {
 
 ```hcl
 module "iam_assumable_roles" {
-  source  = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-assumable-roles"
+  source  = "git::https://github.com/devops-terraform-aws/iam//modules/iam-assumable-roles?ref=v1.0.0"
 
   trusted_role_arns = [
     "arn:aws:iam::307990089504:root",
@@ -114,7 +114,7 @@ module "iam_assumable_roles" {
 
 ```hcl
 module "iam_assumable_roles_with_saml" {
-  source  = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-assumable-roles-with-saml"
+  source  = "git::https://github.com/devops-terraform-aws/iam//modules/iam-assumable-roles-with-saml?ref=v1.0.0"
 
   create_admin_role = true
 
@@ -131,7 +131,7 @@ module "iam_assumable_roles_with_saml" {
 
 ```hcl
 module "iam_eks_role" {
-  source      = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-eks-role"
+  source      = "git::https://github.com/devops-terraform-aws/iam//modules/iam-eks-role?ref=v1.0.0"
 
   role_name   = "my-app"
 
@@ -157,7 +157,7 @@ module "iam_eks_role" {
 
 ```hcl
 module "iam_github_oidc_provider" {
-  source    = "git::https://github.com/devops-terraform-aws/iam.git?ref=v1.0.0//modules/iam-github-oidc-provider"
+  source    = "git::https://github.com/devops-terraform-aws/iam//modules/iam-github-oidc-provider?ref=v1.0.0"
 
   tags = {
     Environment = "test"
